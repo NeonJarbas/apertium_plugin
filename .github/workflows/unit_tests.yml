@@ -38,7 +38,7 @@ jobs:
           pip install -r requirements/test_requirements.txt
       - name: Test apertium Detector
         run: |
-          pytest tests/test_detect.py --doctest-modules --junitxml=tests/test-translate-results.xml
+          pytest tests/test_translate.py --doctest-modules --junitxml=tests/test-translate-results.xml
       - name: Upload test translate results
         uses: actions/upload-artifact@v2
         with:
