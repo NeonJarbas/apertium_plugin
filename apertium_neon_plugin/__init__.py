@@ -11,8 +11,7 @@ class ApertiumTranslator(LanguageTranslator):
                    "https://www.apertium.org/apy/translate"
 
     def translate(self, text, target=None, source=None, url=None):
-        if self.boost and not source:
-            source = self.default_language
+        source = source or self.default_language
         target = target or self.internal_language
         lang_pair = target
         if source:
