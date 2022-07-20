@@ -36,7 +36,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements/requirements.txt
           pip install -r requirements/test_requirements.txt
-      - name: Test apertium Detector
+      - name: Test apertium Translator
         run: |
           pytest tests/test_translate.py --doctest-modules --junitxml=tests/test-translate-results.xml
       - name: Upload test translate results
